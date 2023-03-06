@@ -1,0 +1,42 @@
+/* This is
+a comment??
+*/
+
+html {
+    background-color:lightblue;
+    font-size: 10px;
+    font-family: 'Alike', serif;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: skyblue;
+    padding: 0 20px 20px 20px;
+    border: 5px solid coral;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: chartreuse;
+    text-shadow: 3px 3px 5px red;
+    font-size: 60px;
+    text-align: center;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+a:hover {
+    color:orangered;
+}
