@@ -5,7 +5,6 @@ a comment??
 * {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    line-height: 2;
     color: #333333;
 }
 
@@ -29,40 +28,4 @@ h1 {
 img {
     display: block;
     margin: 0 auto;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* navbar */
-#nav {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 100px;
-    width: 100%;
-    background-color: #FFB74D;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#navLeft {
-    float: left;
-    padding-left: 20px;
-}
-
-#navRight {
-    float: right;
-    padding-right: 20px;
-}
-
-.navText {
-    font-size: 20px;
-    padding: 20px;
 }

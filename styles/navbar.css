@@ -1,0 +1,38 @@
+/* navbar */
+
+#nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: #FFB74D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navLeft {
+    float: left;
+    padding-left: 20px;
+}
+
+#navRight {
+    float: right;
+    padding-right: 20px;
+}
+
+.navText {
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
