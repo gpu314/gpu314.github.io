@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick='changeBackground("blue")'>Blue!</button>
+        <button onclick='changeBackground("red")'>Red!</button>
+        <button onclick='changeBackground("green")'>Green!</button>
+        <button onclick='customColor()'>Custom!</button>
+        <script>
+            function changeBackground(color) {
+                document.body.style.backgroundColor=color;
+            }
+            function customColor() {
+                var bgColor = prompt("What color?");
+                changeBackground(bgColor);
+            }
+        </script>
+    </body>
+</html>
