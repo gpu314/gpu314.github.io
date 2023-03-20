@@ -10,6 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
 }
 
 #navLeft {
@@ -25,8 +27,6 @@
 .navText {
     font-size: 20px;
     padding: 10px;
-    font-family: 'Open Sans', sans-serif;
-    color: #333333;
     background-color: #FFB74D;
 }
 
