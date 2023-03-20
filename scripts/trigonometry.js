@@ -1,3 +1,9 @@
+const degs = ["0", "30&deg;", "45&deg;", "60&deg;", "90&deg;", "120&deg;", "135&deg;", "150&deg;", "180&deg;", "210&deg;", "225&deg;", "240&deg;", "270&deg;", "300&deg;", "315&deg;", "330&deg;"];
+const rads = ["0", "&pi;/6", "&pi;/4", "&pi;/4"]
+const ansSin = ["0", "1/2", "sqrt 2 / 2"]
+const ansCos = []
+const ansTan = []
+
 let qButton = document.getElementById("getQButton");
 let submitButton = document.getElementById("aButton")
 let result = document.getElementById("answerCorrect");
@@ -15,24 +21,38 @@ function generateQuestion() {
     q = "";
     a = 0;
     answerInput.value = "";
-    let n1 = Math.floor(1 + Math.random() * 50);
-    let n2 = Math.floor(1 + Math.random() * 50);
-    let oper = Math.floor(Math.random()*4);
-    if (oper == 0) {
-        q = q.concat(n1, " + ", n2);
-        a = n1 + n2;
-    }
-    else if (oper == 1) {
-        q = q.concat(n1, " - ", n2);
-        a = n1 - n2;
-    }
-    else if (oper == 2) {
-        q = q.concat(n1, " x ", n2);
-        a = n1 * n2;
+    let n = Math.floor(Math.random() * 16);
+    let fn = Math.floor(Math.random() * 3);
+    /* Radians */
+    if (document.getElementById("toggle")) {
+        if (fn == 0) {
+            q = q.concat("sin ");
+            a = ansSin[n];
+        }
+        else if (fn == 1) {
+            q = q.concat("cos ");
+            a = ansCos[n];
+        }
+        else {
+            q = q.concat("tan ");
+            a = ansTan[n];
+        }
+        q = q.concat(rads[n]);
     }
     else {
-        q = q.concat(n1, " / ", n2);
-        a = Math.round(((n1 / n2) + Number.EPSILON) * 100) / 100
+        if (fn == 0) {
+            q = q.concat("sin ");
+            a = ansSin[n];
+        }
+        else if (fn == 1) {
+            q = q.concat("cos ");
+            a = ansCos[n];
+        }
+        else {
+            q = q.concat("tan ");
+            a = ansTan[n];
+        }
+        q = q.concat(degs[n]);
     }
 }
 
