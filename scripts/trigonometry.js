@@ -11,6 +11,8 @@ let answerInput = document.getElementById("answer");
 
 let q = "";
 let a = 0;
+let n = 0;
+let fn = 0;
 
 function ask(question, correct) {
     var qText = document.getElementById("qText");
@@ -21,21 +23,21 @@ function generateQuestion() {
     q = "";
     a = 0;
     answerInput.value = "";
-    let n = Math.floor(Math.random() * 16);
-    let fn = Math.floor(Math.random() * 3);
+    n = Math.floor(Math.random() * 16);
+    fn = Math.floor(Math.random() * 3);
     /* Radians */
     if (document.getElementById("toggle").checked) {
         if (fn == 0) {
             q = q.concat("sin(");
-            a = Math.sin(Math.PI * (+(rads[n].replace("&pi;",""))));
+            a = Math.sin(Math.PI * eval(rads[n].replace("&pi;","(1)")));
         }
         else if (fn == 1) {
             q = q.concat("cos(");
-            a = Math.cos(Math.PI * (+(rads[n].replace("&pi;",""))));
+            a = Math.cos(Math.PI * eval(rads[n].replace("&pi;","(1)")));
         }
         else {
             q = q.concat("tan(");
-            a = Math.tan(Math.PI * (+(rads[n].replace("&pi;",""))));
+            a = Math.tan(Math.PI * eval(rads[n].replace("&pi;","(1)")));
         }
         q = q.concat(rads[n], ")");
     }
