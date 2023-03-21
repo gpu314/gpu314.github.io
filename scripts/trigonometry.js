@@ -1,8 +1,8 @@
-const degs = ["0", "30", "45", "60", "90", "120", "135", "150", "180", "210", "225", "240", "270", "300", "315", "330"];
-const rads = ["0", "&pi;/6", "&pi;/4", "&pi;/3","&pi;/2","2&pi;/3","3&pi;/4","5&pi;/6","&pi;","7&pi;/6","5&pi;/4","4&pi;/3","3&pi;/2","5&pi;/3","7&pi;/4","11&pi;/6"]
-const ansSin = ["0", "1 / 2", "sqrt 2 / 2", "sqrt 3 / 2", "1", "sqrt 3 / 2", "sqrt 2 / 2", "1 / 2", "0", "-1 / 2", "-sqrt 2 / 2", "-sqrt 3 / 2", "-1", "-sqrt 3 / 2", "-sqrt 2 / 2", "-1 / 2"]
-const ansCos = ["1", "sqrt 3 / 2", "sqrt 2 / 2", "1 / 2", "0", "-1 / 2", "-sqrt 2 / 2", "-sqrt 3 / 2", "-1", "-sqrt 3 / 2", "-sqrt 2 / 2", "-1 / 2", "0", "1 / 2", "sqrt 2 / 2", "sqrt 3 / 2"]
-const ansTan = ["0", "sqrt 3 / 3", "1", "sqrt 3", "dne", "-sqrt 3", "-1", "-sqrt 3 / 3", "0", "sqrt 3 / 3", "1", "sqrt 3", "dne", "-sqrt 3", "-1", "-sqrt 3 / 3"]
+const degs = ["0", "30&deg;", "45&deg;", "60&deg;", "90&deg;", "120&deg;", "135&deg;", "150&deg;", "180&deg;", "210&deg;", "225&deg;", "240&deg;", "270&deg;", "300&deg;", "315&deg;", "330&deg;"];
+const rads = ["0", "&pi;/6", "&pi;/4", "&pi;/4"]
+const ansSin = ["0", "1/2", "sqrt 2 / 2"]
+const ansCos = []
+const ansTan = []
 
 let qButton = document.getElementById("getQButton");
 let submitButton = document.getElementById("aButton")
@@ -24,44 +24,36 @@ function generateQuestion() {
     let n = Math.floor(Math.random() * 16);
     let fn = Math.floor(Math.random() * 3);
     /* Radians */
-    if (document.getElementById("toggle").checked) {
+    if (document.getElementById("toggle")) {
         if (fn == 0) {
-            q = q.concat("sin(");
-            a = Math.sin(Math.PI * (+(rads[n].replace("&pi;",""))));
+            q = q.concat("sin ");
+            a = ansSin[n];
         }
         else if (fn == 1) {
-            q = q.concat("cos(");
-            a = Math.cos(Math.PI * (+(rads[n].replace("&pi;",""))));
+            q = q.concat("cos ");
+            a = ansCos[n];
         }
         else {
-            q = q.concat("tan(");
-            a = Math.tan(Math.PI * (+(rads[n].replace("&pi;",""))));
+            q = q.concat("tan ");
+            a = ansTan[n];
         }
-        q = q.concat(rads[n], ")");
+        q = q.concat(rads[n]);
     }
     else {
         if (fn == 0) {
             q = q.concat("sin ");
-            a = Math.sin(Math.PI * (+(degs[n])) / 180);
+            a = ansSin[n];
         }
         else if (fn == 1) {
             q = q.concat("cos ");
-            a = Math.cos(Math.PI * (+(degs[n])) / 180);
+            a = ansCos[n];
         }
         else {
             q = q.concat("tan ");
-            if (n == 4 || n == 12) a = "dne";
-            else a = Math.tan(Math.PI * (+(degs[n])) / 180);
+            a = ansTan[n];
         }
-        q = q.concat(degs[n], "&deg;");
+        q = q.concat(degs[n]);
     }
-}
-
-function valueOf(x) {
-    if (isNaN(+x)) {
-        return (Math.abs(eval(x.replace("sqrt", ""))) / eval(x.replace("sqrt", ""))) * ((Math.sqrt(Math.abs(eval(x.replace("sqrt", "")))) / Math.sqrt(+(x.slice(-1)))));
-    }
-    return +x
 }
 
 qButton.onclick = () => {
@@ -71,14 +63,14 @@ qButton.onclick = () => {
 
 submitButton.onclick = () => {
     var answer = answerInput.value;
-    if ((a == "dne" && answer.toLowerCase() == "dne") || (Math.abs(valueOf(answer) - a) < 0.0001)) {
+    if (answer == a) {
         result.innerHTML = "Correct!";
         result.style.color = "green";
         generateQuestion();
         ask(q, a);
     }
     else {
-        result.innerHTML = valueOf(answer) - a;
+        result.innerHTML = "Incorrect :( Try again or press the button above for a new question.";
         result.style.color = "red";
     }
 }
