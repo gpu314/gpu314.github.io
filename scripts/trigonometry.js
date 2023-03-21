@@ -1,8 +1,8 @@
-const degs = ["0", "30&deg;", "45&deg;", "60&deg;", "90&deg;", "120&deg;", "135&deg;", "150&deg;", "180&deg;", "210&deg;", "225&deg;", "240&deg;", "270&deg;", "300&deg;", "315&deg;", "330&deg;"];
-const rads = ["0", "&pi;/6", "&pi;/4", "&pi;/4"]
-const ansSin = ["0", "1/2", "sqrt 2 / 2"]
-const ansCos = []
-const ansTan = []
+const degs = ["0", "30", "45", "60", "90", "120", "135", "150", "180", "210", "225", "240", "270", "300", "315", "330"];
+const rads = ["0", "&pi;/6", "&pi;/4", "&pi;/3", "&pi;/2", "2&pi;/3", "3&pi;/4", "5&pi;/6", "&pi;", "7&pi;/6", "5&pi;/4", "4&pi;/3", "3&pi;/2", "5&pi;/3", "7&pi;/4", "11&pi;/6"]
+const ansSin = ["0", "1 / 2", "sqrt 2 / 2", "sqrt 3 / 2", "1", "sqrt 3 / 2", "sqrt 2 / 2", "1 / 2", "0", "-1 / 2", "-sqrt 2 / 2", "-sqrt 3 / 2", "-1", "-sqrt 3 / 2", "-sqrt 2 / 2", "-1 / 2"]
+const ansCos = ["1", "sqrt 3 / 2", "sqrt 2 / 2", "1 / 2", "0", "-1 / 2", "-sqrt 2 / 2", "-sqrt 3 / 2", "-1", "-sqrt 3 / 2", "-sqrt 2 / 2", "-1 / 2", "0", "1 / 2", "sqrt 2 / 2", "sqrt 3 / 2"]
+const ansTan = ["0", "sqrt 3 / 3", "1", "sqrt 3", "dne", "-sqrt 3", "-1", "-sqrt 3 / 3", "0", "sqrt 3 / 3", "1", "sqrt 3", "dne", "-sqrt 3", "-1", "-sqrt 3 / 3"]
 
 let qButton = document.getElementById("getQButton");
 let submitButton = document.getElementById("aButton")
