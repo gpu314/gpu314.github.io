@@ -13,19 +13,3 @@ var Tile = function (x, y) {
   }
 };
 
-
-var programCode = function (processingInstance) {
-  with (processingInstance) {
-
-    size(400, 400);
-    frameRate(30);
-
-    test = new Tile(50, 50);
-    test.draw();
-  }
-};
-
-// Get the canvas that ProcessingJS will use
-var board = document.getElementById("tttBoard");
-// Pass the function to ProcessingJS constructor
-var processingInstance = new Processing(board, programCode); 
