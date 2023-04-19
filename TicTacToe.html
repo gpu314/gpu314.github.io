@@ -9,35 +9,18 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
     </head>
     <body>
-
-        <nav id="nav">
-            <div id="navLeft">
-                <a class="navText" href="/">Grace Pu</a>
-            </div>
-            <div id="navRight">
-                <a class="navText" href="/about">About</a>
-                <div class="navDropdown">
-                    <a class="navText">Random Stuff</a>
-                    <div class="navDropdownContent">
-                        <a href="/TicTacToe.html">Tic Tac Toe</a>
-                        <a href="/trigonometry.html">Trigonometry</a>
-                        <a href="/arithmetic.html">Arithmetic</a>
-                        <a href="/minions.html">Minions</a>
-                    </div>
-                </div>
-                <a class="navText" href="/contact">Contact</a>
-            </div>
-        </nav>
+        <script src="scripts/navbar.js"></script>
+        <div include-html="navbar.html"></div>
 
         <div id="description" class="main">
             <h1>Tic Tac Toe</h1>
             <p>hmm</p>
-            <div id="tttBoard">
-                <input type="text"
-            </div>
             <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
             <script src="scripts/ticTacToe.js"></script>
         </dv>
+        <script>
+            includeHTML();
+        </script>
     </body>
 </html>
 
