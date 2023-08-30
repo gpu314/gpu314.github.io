@@ -1,47 +1,27 @@
 <!DOCTYPE html>
 <html lang="eng-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Arithmetic</title>
+        <link href="styles/navbar.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" />
+        <script src="scripts/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Arithmetic</title>
-    <link href="styles/navbar.css" rel="stylesheet" />
-    <link href="styles/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
-</head>
+    <body>
+        <div id="nav"></div>
 
-<body>
-
-    <nav id="nav">
-        <div id="navLeft">
-            <a class="navText" href="/">Grace Pu</a>
-        </div>
-        <div id="navRight">
-            <a class="navText" href="/about">About</a>
-            <div class="navDropdown">
-                <a class="navText">Random Stuff</a>
-                <div class="navDropdownContent">
-                    <a href="trigonometry.html">Trigonometry</a>
-                    <a href="arithmetic.html">Arithmetic</a>
-                    <a href="minions.html">Minions</a>
-                </div>
-            </div>
-            <a class="navText" href="/contact">Contact</a>
-        </div>
-    </nav>
-
-    <h1>Arithmetic</h1>
-    <p>Practice your addition, subtraction, multiplication, and division skills using integers from 1 to 50.</p>
-    <button id="getQButton">Click for a question!</button>
-    <p>Question (round to two decimal places for division): </p>
-    <p id="qText">a</p>
-    <input id="answer" type="text" placeholder="Answer"/>
-    <button id="aButton">Submit</button>
-    <p id="answerCorrect"></p>
-    <script src="scripts/arithmetic.js"></script>
-
-
-
-</body>
-
+        <h1>Arithmetic</h1>
+        <p>Practice your addition, subtraction, multiplication, and division skills using integers from 1 to 50.</p>
+        <button id="getQButton">Click for a question!</button>
+        <p>Question (round to two decimal places for division):</p>
+        <p id="qText">a</p>
+        <input id="answer" type="text" placeholder="Answer" />
+        <button id="aButton">Submit</button>
+        <p id="answerCorrect"></p>
+        <script src="scripts/arithmetic.js"></script>
+    </body>
 </html>

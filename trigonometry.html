@@ -1,54 +1,33 @@
 <!DOCTYPE html>
 <html lang="eng-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Trigonometry</title>
+        <link href="styles/navbar.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" />
+        <script src="scripts/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Trigonometry</title>
-    <link href="styles/navbar.css" rel="stylesheet" />
-    <link href="styles/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
-    <script src="scripts/main.js"></script>
-</head>
+    <body>
+        <div id="nav"></div>
 
-<body>
+        <h1>Trigonometry</h1>
+        <p>Practice common trigonometric ratios; sine, cosine, and tangent. Choose: degrees (green) or radians (blue).</p>
+        <label class="switch">
+            <input type="checkbox" id="toggle" />
+            <span class="slider"></span>
+        </label>
+        <br />
+        <button id="getQButton">Click for a question!</button>
+        <p>Question (answer format is 1/2, sqrt 3 / 2):</p>
+        <p id="qText">a</p>
+        <input id="answer" type="text" placeholder="Answer" />
+        <button id="aButton">Submit</button>
+        <p id="answerCorrect"></p>
 
-    <nav id="nav">
-        <div id="navLeft">
-            <a class="navText" href="/">Grace Pu</a>
-        </div>
-        <div id="navRight">
-            <a class="navText" href="/about">About</a>
-            <div class="navDropdown">
-                <a class="navText">Random Stuff</a>
-                <div class="navDropdownContent">
-                    <a href="trigonometry.html">Trigonometry</a>
-                    <a href="arithmetic.html">Arithmetic</a>
-                    <a href="minions.html">Minions</a>
-                </div>
-            </div>
-            <a class="navText" href="/contact">Contact</a>
-        </div>
-    </nav>
-
-    <h1>Trigonometry</h1>
-    <p>Practice common trigonometric ratios; sine, cosine, and tangent. Choose: degrees (green) or radians (blue).</p>
-    <label class="switch">
-        <input type="checkbox" id="toggle">
-        <span class="slider"></span>
-    </label>
-    <br>
-    <button id="getQButton" >Click for a question!</button>
-    <p>Question (answer format is 1/2, sqrt 3 / 2): </p>
-    <p id="qText">a</p>
-    <input id="answer" type="text" placeholder="Answer"/>
-    <button id="aButton">Submit</button>
-    <p id="answerCorrect"></p>
-
-    <script src="scripts/trigonometry.js"></script>
-
-
-
-</body>
-
+        <script src="scripts/trigonometry.js"></script>
+    </body>
 </html>
