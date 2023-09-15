@@ -1,18 +1,29 @@
-<nav id="nav">
-    <div id="navLeft">
-        <a class="navText" href="/">Grace Pu</a>
-    </div>
-    <div id="navRight">
-        <a class="navText" href="/about.html">About</a>
-        <div class="navDropdown">
-            <a class="navText">Random Stuff</a>
-            <div class="navDropdownContent">
-                <a href="TicTacToe.html">Tic Tac Toe</a>
-                <a href="trigonometry.html">Trigonometry</a>
-                <a href="arithmetic.html">Arithmetic</a>
-                <a href="minions.html">Minions</a>
-            </div>
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Grace Pu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Random Stuff</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="TicTacToe.html">Tic Tac Toe</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="trigonometry.html">Trigonometry</a></li>
+                        <li><a class="dropdown-item" href="arithmetic.html">Arithmetic</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="minions.html">Minions</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
-        <a class="navText" href="/contact.html">Contact</a>
     </div>
 </nav>
