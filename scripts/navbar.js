@@ -1,24 +1,12 @@
-function includeHTML() {
-    var a, i, element, file, xhttp;
-    a = document.getElementById("*");
-    for (i=0; i<z.length; i++) {
-        element = z[i];
-        file = element.getAttribute("include-html");
-        if (file) {
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                    if (this.status == 200) {
-                        element.includeHTML = this.responseText;
-                    }
-                    element.removeAttribute("include-html");
-                    includeHTML();
-                }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            return;
+document.addEventListener("DOMContentLoaded", function () {
+    var curr = window.location.pathname.split("/").pop();
+    var nav = document.querySelectorAll(".navbar-nav a");
+    nav.forEach(function (n) {
+        var page = n.getAttribute("href").split("/").pop();
+        if (page === curr) {
+            item.classList.add("active");
+        } else {
+            item.classList.remove("active");
         }
-    }
-}
-
+    });
+});
