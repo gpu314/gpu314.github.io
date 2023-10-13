@@ -13,21 +13,22 @@
 
     <body>
         <div id="nav"></div>
-
-        <h1>Trigonometry</h1>
-        <p>Practice common trigonometric ratios; sine, cosine, and tangent. Choose: degrees (green) or radians (blue).</p>
-        <label class="switch">
-            <input type="checkbox" id="toggle" />
-            <span class="slider"></span>
-        </label>
-        <br />
-        <button id="getQButton">Click for a question!</button>
-        <p>Question (answer format is 1/2, sqrt 3 / 2):</p>
-        <p id="qText">a</p>
-        <input id="answer" type="text" placeholder="Answer" />
-        <button id="aButton">Submit</button>
-        <p id="answerCorrect"></p>
-
-        <script src="scripts/trigonometry.js"></script>
+        <div class="container mt-4">
+            <h1>Trigonometry</h1>
+            <p>Practice common trigonometric ratios; sine, cosine, and tangent.</p>
+            <div class="form-check form-switch mb-2">
+                <input class="form-check-input switch-colour" type="checkbox" role="switch" id="toggle" />
+                <label class="form-check-label" for="toggle">Choose: degrees (unechecked / white) or radians (checked / blue).</label>
+            </div>
+            <button id="getQButton" class="btn btn-primary mb-2">Click for a question!</button>
+            <p>Question (answer format is 1/2, sqrt 3 / 2):</p>
+            <p id="qText">a</p>
+            <div class="input-group">
+                <input id="answer" type="text" class="form-control" placeholder="Answer" />
+                <button id="aButton" class="btn btn-primary">Submit</button>
+            </div>
+            <p id="answerCorrect"></p>
+            <script src="scripts/trigonometry.js"></script>
+        </div>
     </body>
 </html>
