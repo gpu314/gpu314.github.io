@@ -1,20 +1,125 @@
 <!DOCTYPE html>
-<html lang="eng-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Grace Pu</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    </head>
-    <body>
-        <div id="nav"></div>
-        <div class="container mt-4">
-            <h1 style="text-align: center">Hi!</h1>
-            <p style="text-align: center">I'm Grace Pu, a Software Engineering student at the University of Waterloo. </p>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Pu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+        .navbar {
+            background-color: #00BD9D;
+        }
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover {
+            color: #333 !important;
+        }
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: #00BD9D;
+        }
+        .card-title {
+            color: #00BD9D;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            color: black;
+        }
+        .btn-primary {
+            background-color: #00BD9D;
+            border-color: #00BD9D;
+        }
+        .btn-primary:hover {
+            background-color: #008f75;
+            border-color: #008f75;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Grace Pu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#awards">Awards</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li> -->
+            </ul>
         </div>
-    </body>
+    </nav>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>Hi! I'm Grace Pu, a Software Engineering student at the University of Waterloo.</p>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="row">
+        </div>
+    </section>
+
+    <section id="awards" class="container">
+        <h2 class="section-title">Awards</h2>
+        <ul>
+            <li><strong>Pan American Girls' Math Olympiad (2022):</strong> One of four students selected to represent
+                Team Canada. Received a silver medal, ranked 13th internationally out of 64 participants.
+            <li><strong>Canadian European Girls’ Olympiad in Informatics Training Camp Invitee (2022):</strong> Invited
+                to the training and selection camp for the Canadian European Girls’ Olympiad in Informatics team.</li>
+        </ul>
+    </section>
+
+    <!-- <section id="contact" class="container">
+        <h2 class="section-title">Contact</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+ -->
+    <footer class="footer">
+        <p>&copy; Grace Pu.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>
